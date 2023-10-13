@@ -1,2 +1,2 @@
-# H.obiekweCOS101
+# h.obiekweCOS101
 COS 101 class
