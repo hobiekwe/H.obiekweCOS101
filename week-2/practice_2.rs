@@ -1,10 +1,10 @@
 fn main(){
 	
-	println!(); // prints just a
+	println!(); 
 
-	println!("hello ");//prints 
+	println!("hello ");
 
-	println!("format {} arguements", "some"); //prints format some arguements
+	println!("format {} arguements", "some");
 
 	println!("My name is {}. I am in the class of stream 1" "Dagogo William-Jumbo!"); 
 
