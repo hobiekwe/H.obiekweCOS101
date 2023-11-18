@@ -9,7 +9,7 @@ fn main() {
     let mut input_name = String::new();
     let mut input_numberofpapers = String::new();
     
-
+//researcher's information
         println!("Enter name of researcher");
         io::stdin().read_line(&mut input_name).expect("Failed to read input");
 
