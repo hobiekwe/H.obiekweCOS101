@@ -7,7 +7,7 @@ fn main() {
     //index is the non negative value which is smaller than the size of the vetcor
     let index:usize = input1.trim().parse().expect("Invalid input");
 
-    //gatting value at given index value
+    //getting value at given index value
     let ch: char = v[index];
     print!("{} is the character for index [{}]\n", ch, index);
 
