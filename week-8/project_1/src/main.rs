@@ -1,3 +1,5 @@
 fn main() {
-    let mut occupation 
+    let mut : Vec<String> = Vec::new();
+
+    
 }

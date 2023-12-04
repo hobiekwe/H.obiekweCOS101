@@ -1,7 +1,7 @@
 fn main() {
     //Create an empty vector "City"
     let mut city : Vec<String> = Vec::new();
-    //Print City Vector 
+    //Print City Vector
     println!("The City vector has element {}", city.len());
     //Push new elements into 
     let mut input1 = String::new();
