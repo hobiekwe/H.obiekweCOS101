@@ -1,33 +1,23 @@
 use std::io::Write;
-
 fn main() {
 
-    let announce = "Welcome to Nigeria Brewery Limited\n";
-    let dept = "Our Rich portfolio of drinks";
-    let drinks = vec! ["lager", "stout", "non_alcoholic"]; 
-
-    let lager = ["33 export", "Desperados", "Goldberg", "Gulder", "Heineken", "Star"];
-    let stout =  ["Legend", "Turbo", "Williams"];
-    let non_alcoholic =  ["AmstelMalta", "Fayrouz"];
-    
-  
-    
-    
-
-    let mut file = std::fs::File::create("data.txt").expect("create failed");
-    file.write_all("Welcome to Rust Programming\n".as_bytes()).expect("write failed");
-    file.write_all(announce.as_bytes()).expect("write failed");
-    file.write_all(dept.as_bytes()).expect("write failed");
-    println! ("categories successfullly created");
-    
-
+    let lager =["33 Export".to_string(), "Desperados".to_string(), "Goldberg".to_string(), "Gulder".to_string(), "Heineken".to_string() , "Star".to_string()];
+    let stout = ["Legend".to_string(), "Turbo King".to_string(), "Williams".to_string()];
+    let non_Alchoholic = ["Maltina".to_string(), "Amstel Malt".to_string(), "Malta Gold".to_string(), "Fayrouz".to_string()];
 
     
+    let drinks = [&lager[..],&stout[..],&non_Alchoholic[..]];
+    let drinkname = ["lager", "stout" , "non_Alchoholic"];
 
-    
-   
+    for x in 0..3{
+        let mut file = std::fs::File::create(format!("{}.txt",drinkname[x])).expect("create failed");
+        file.write_all(format!("{}:\n", drinkname[x]).as_bytes()).expect("write failed");
 
+        for item in drinks[x]{
+            file.write_all(format!("{},\n", item).as_bytes()).expect("Failed to write");
+        }
+    }
 
+    println!("Task completed succesfully");
 
-    
 }
